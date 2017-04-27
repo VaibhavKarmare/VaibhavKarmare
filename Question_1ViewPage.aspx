@@ -67,7 +67,7 @@
                     <asp:TemplateField HeaderText="Author">
                         <ItemTemplate>
                             <asp:Label ID="Author_Label" runat="server" Text='<%# Eval("bookauthor") %>'></asp:Label>
-                        </ItemTemplate>
+                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Publisher">
                         <ItemTemplate>
@@ -82,7 +82,7 @@
                     <asp:TemplateField HeaderText="Edit">
                         <ItemTemplate>
                             <asp:ImageButton ID="EditImageButton" runat="server"
-                                src="Images/Edit_Icon.png" Height="30px" CommandArgument='<%# Eval("bookid") %>' CommandName="edit" />
+                                src="Images/Edit_Icon.png" Height="30px" CommandArgument='<%# Eval("bookid") %>' CommandName="editrow" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Delete">
