@@ -19,7 +19,7 @@ create procedure showbookdetails
 @bookid int
 as
 begin
-select bookname,bookauthor,bookpublisher,bookprice from bookinfo where bookid=@bookid
+select * from bookinfo where bookid=@bookid
 end
 
 --Create Store procedure for Insert/Update Book Details 
