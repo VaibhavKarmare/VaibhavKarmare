@@ -1,0 +1,5 @@
+--Question No.3 Answer
+--A query to list all orders with customer information.
+select FirstName,LastName, City, Country, Phone,OrderDate, OrderNumber, TotalAmount
+from Customer_table inner join Order_table on 
+Customer_table.CustomerID= Order_table.CustomerID

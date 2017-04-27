@@ -1,0 +1,56 @@
+--Create a New Database with Database Name
+Create Database BookDetails
+
+--Create a New Table in BookDetails Database
+Create table bookinfo
+(
+bookid int identity(1,1) NOT NULL PRIMARY KEY,
+bookname varchar(255),
+bookauthor varchar(255),
+bookpublisher varchar(255),
+bookprice integer
+)
+
+--Execute the bookinfo Table
+select*from bookinfo
+
+--create Store Procedure for Display the Book details
+create procedure showbookdetails
+@bookid int
+as
+begin
+select bookname,bookauthor,bookpublisher,bookprice from bookinfo where bookid=@bookid
+end
+
+--Create Store procedure for Insert/Update Book Details 
+create procedure insertbookdetails
+@bookname varchar(255),
+@bookauthor varchar(255),
+@bookpublisher varchar(255),
+@bookprice int
+as
+begin
+Insert into bookinfo(bookname,bookauthor,bookpublisher,bookprice)
+values (@bookname,@bookauthor,@bookpublisher,@bookprice)
+end
+
+--Create Store Procedure for Edit Book detaials
+create procedure editbookdetails
+@bookid int
+as
+begin
+select bookname,bookauthor,bookpublisher,bookprice from bookinfo where bookid=@bookid
+end
+
+--Create Store Procedure for Delete the Book details
+create procedure deletebookdetails
+@bookid int
+as
+begin
+delete from bookinfo where bookid=@bookid
+end
+
+
+
+
+
