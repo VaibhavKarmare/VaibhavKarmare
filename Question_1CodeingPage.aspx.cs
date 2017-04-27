@@ -41,7 +41,7 @@ namespace Question_1
             con.ConnectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
             con.Open();
             SqlCommand cmd = new SqlCommand();
-            if (e.CommandName == "edit")
+            if (e.CommandName == "editrow")
             {
                 cmd.CommandText = "editbookdetails";
                 cmd.CommandType = CommandType.StoredProcedure;
