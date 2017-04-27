@@ -122,9 +122,9 @@
             if (isValid)
                 isValid = validatetextbox("AuthorTextBox");
             if (isValid)
-                isValid = validatetextbox("");
+                isValid = validatetextbox("PublisherTextBox");
             if (isValid)
-                isValid = validatetextbox("");
+                isValid = validatetextbox("PriceTextBox");
             return isValid;
         }
     </script>
